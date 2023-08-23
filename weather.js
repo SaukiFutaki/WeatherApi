@@ -88,6 +88,19 @@ function getForcastWeather(weatherData) {
 }
 
 
+const cityInput = document.getElementById("city-name");
+
+
+cityInput.addEventListener("keyup", function (event) {
+ 
+  if (event.keyCode === 13) {
+ 
+    const cityName = cityInput.value;
+
+ 
+    getWeather(cityName);
+  }
+});
 
 const btn = document.getElementById("get-city")
 btn.addEventListener("click", () => {
